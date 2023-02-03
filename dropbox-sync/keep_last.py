@@ -15,6 +15,8 @@ def main(number_to_keep):
     snapshot_info.raise_for_status()
 
     snapshots = snapshot_info.json()["data"]["backups"]
+    print(f'{snapshots=}')
+
     for snapshot in snapshots:
         d = parse(snapshot["date"])
         if d.tzinfo is None or d.tzinfo.utcoffset(d) is None:
