@@ -4,7 +4,6 @@
   "slug": "dropbox_sync_b117",
   "description": "Upload your Hass.io backups to Dropbox",
   "url": "https://github.com/bolek117/hassio-dropbox-sync",
-  "startup": "before",
   "arch": [
     "amd64"
   ],
