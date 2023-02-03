@@ -10,7 +10,7 @@ docker run \
 	-v $(pwd)/dropbox-sync:/data \
 	homeassistant/amd64-builder \
 		--amd64 \
-		-t dropbox-sync-github \
+		-t dropbox-sync \
 		-r 'https://github.com/bolek117/hassio-dropbox-sync' \
 		-b 20220203_fix \
 		--no-cache
