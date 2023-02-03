@@ -26,7 +26,7 @@ while read -r msg; do
     echo "[Info] Received message with command ${cmd}"
     if [[ $cmd = "upload" ]]; then
         echo "[Info] Uploading all .tar files in /backup (skipping those already in Dropbox)"
-        ./dropbox_uploader.sh -s -f /etc/uploader.conf upload /backup/*.tar "$OUTPUT_DIR"
+        ./dropbox_uploader.sh -s -f -d /etc/uploader.conf upload /backup/*.tar "$OUTPUT_DIR"
         if [[ "$KEEP_LAST" ]]; then
             echo "[Info] keep_last option is set, cleaning up files..."
             python3 /keep_last.py "$KEEP_LAST"
